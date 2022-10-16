@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        {% block title %}
+        {% endblock %}
+    </title>
+<style>
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+}
+</style>
+</head>
+<body>
+
+<ul>
+  <li><a class="active" href="{% url 'home' %}">List</a></li>
+  <li><a href="{% url 'crReminder' %}">Create Reminder</a></li>
+  <li><a href="{% url 'calender' %}">Calender</a></li>
+  <li><a href="{% url 'tnote' %}">Time & Note</a></li>
+  <li><a href="#darkmode">DarkMode</a></li>
+  <li><a href="#sound">Sound</a></li>
+  <li><a href="#about">About Us</a></li> 
+
+</ul>
+
+{% block content %}
+{% endblock %}
+
+</body>
+</html>
